@@ -1,0 +1,29 @@
+ 
+ :root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --primary-color:rgb(184, 181, 181);
+    
+}
+ *{
+    box-sizing: border-box;
+ }
+
+ .btn{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(132, 132, 132);
+    border-radius: 2px;
+    padding:5px 15px;
+ }
+ .btn.btn-active{
+    background-color: rgb(40, 176, 40);
+    color: white;
+ }
+ .items-link.btn:hover{
+    background-color: rgb(40, 176, 40);
+    color: white;
+ }

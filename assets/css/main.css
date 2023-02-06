@@ -1,0 +1,43 @@
+                        /*HEADER*/
+.header{
+    background-color: #f0f3f7;
+    box-shadow: 0 2px 4px var(--primary-color);
+}
+.logo{
+    height: 60px;
+    width: 80px;
+    background-image: url(/assets/image/4527_mvum_211208.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color:  #e7e9eb;
+}
+.header-navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header__navbar-items{
+    list-style: none;
+}
+.items-link{
+    text-decoration: none;
+}
+.header__navbar-list{
+    display: flex;
+}
+.header__navbar-extentions{
+    display: flex;
+}
+.header__search.btn{
+    color: black;
+    background-color:#dbdbdb;
+    padding:0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin:5px;
+    cursor: pointer;
+}
+.header__search.btn:hover{
+    opacity: 0.8;
+}
