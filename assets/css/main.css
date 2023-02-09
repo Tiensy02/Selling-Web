@@ -1,19 +1,20 @@
                         /*HEADER*/
 .header{
-    background-color: #f0f3f7;
+    background-image: linear-gradient(white,#f8f6f6);
     box-shadow: 0 2px 4px var(--primary-color);
+    
 }
 .logo{
     height: 60px;
     width: 80px;
-    background-image: url(/assets/image/4527_mvum_211208.jpg);
+    background-image: url(/_07_sell-web/assets/image/4527_mvum_211208.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     color:  #e7e9eb;
 }
 .header-navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
     align-items: center;
 }
 .header__navbar-items{
@@ -30,7 +31,7 @@
 }
 .header__search.btn{
     color: black;
-    background-color:#dbdbdb;
+    background-color:#f0f0f0;
     padding:0;
     height: 30px;
     width: 30px;
@@ -41,3 +42,387 @@
 .header__search.btn:hover{
     opacity: 0.8;
 }
+                       /*SLIDES*/
+.Home-selection{
+    margin-top: 20px;
+}
+.slides{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.slide-contain{
+    width:60%;
+}
+.slide-image{
+    flex:1;
+    height:400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.slide-contain span{
+    color: var(--green-color);
+    font-size: 1.6rem;
+}
+.slide-contain h2{
+    color: var(--product-color);
+    font-size: 2.5rem;
+    margin :20px 0;
+}
+.slide-contain p{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    width: 80%;
+}
+.slide-contain .btn{
+    width:150px;
+}
+.slide-contain .btn:hover{
+    box-shadow: 0 5px 2px #ccc;
+}
+.slide-contain .btn:active{
+    transform: translateY(5px);
+}
+
+
+                /*DISHES*/
+.dishes{
+    background-color: #eff1f3;
+}
+.dishes-heading{
+    padding:20px 0;
+    text-align: center;
+}
+.note{
+    color: var(--green-color);
+    font-size:1.2rem;
+}
+.headding{
+    color:var(--product-color);
+    font-size: 1.4rem;
+    margin:10px 0;
+}
+
+                /*PRODUCT*/
+.dishes-product{
+    width:100%;
+    height: 230px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.product-wrapper{
+    position:relative;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.product-headding{
+    text-align: center;
+}
+.ratting{
+    color: var(--green-color);
+}
+.product-sell{
+    display: flex;
+    justify-content: space-between;
+    padding:15px 0;
+}
+.price{
+    color: var(--green-color);
+    font-size: 1.7rem;
+}
+.add-cart{
+    background-color: var(--blue-color);
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 20px;
+    transition: padding 0.5s,background-color 0.5s;
+    cursor: pointer;
+}
+.add-cart:hover{
+    background-color: var(--green-color);
+    padding:5px 25px;
+}
+.product-view{
+    position:absolute;
+    left:0;
+    top:0;
+    display: none;
+    transition: background-color 0.5s,color 0.5s;
+}
+
+.product-favorite{
+    position:absolute;
+    right:0;
+    top:0;
+    transition: background-color 0.5s,color 0.5s;
+    display: none;
+}
+.product-wrapper:hover .product-view{
+    display: flex;
+}
+.product-wrapper:hover .product-favorite{
+    display: flex;
+}
+.product-view:hover{
+    background-color: var(--green-color);
+    color: white;
+}
+.product-favorite:hover{
+    background-color: var(--green-color);
+    color: white;
+}
+                    /*About*/
+.about-img{
+    background-image: url(/_07_sell-web/assets/image/pho-bo.jpg);
+    background-size: contain;
+    height:400px;
+    background-repeat: no-repeat;
+}
+.infomation-descri{
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+.information-headding{
+    color: #4578bb;
+    font-size:2rem;
+}
+.about-sell-list{
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    padding-left: 0;
+    margin:15px 0;
+}
+.about-sell-items{
+    background-color: #f8f6f6;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    padding: 10px 5px;
+    line-height: 1.8rem;
+}
+.about-sell-items i{
+    color:var(--green-color);
+    margin-right:5px;
+}
+.about-more.add-cart{
+    height:30px;
+    width:150px;
+    font-family: Trocchi;
+}
+                    /*Review*/
+.Review{
+    background-color:white;
+}
+.user-image{
+    background-image: url(/_07_sell-web/assets/image/user.jpg);
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.feedback-slides{
+    width:350px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+.feedback-headding{
+    display: flex;
+    justify-content: space-around;
+    padding:10px;
+}
+.feedback-icon{
+    font-size: 4rem;
+    color: #ccc;
+}
+.feedback-descri{
+    color: var(--text-color);
+   
+}
+.feedback-descrition{
+    text-overflow: ellipsis;
+    overflow: hidden;   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    padding:0 10px;
+}
+.feedback-more{
+    text-decoration: none;
+    color: var(--green-color);
+    font-size: 1.2rem;
+    margin-left:70%;
+    transition: color 0.5s;
+    padding:5px 0;
+}
+.feedback-more:hover{
+   color:var(--blue-color);
+}
+.feedback-user{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+
+}
+.Menu{
+    background-color:var(--background-color) ;
+}
+.Category-food{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.food-items{
+    padding:10px;
+    color: black;
+    border-radius: 50%;
+    border: 3px solid var(--green-color);
+    margin-right: 5px;
+    cursor: pointer;
+}
+.food-items.active{
+    background-color: var(--green-color);
+    color:white;
+}
+.food-items:hover{
+    background-color: var(--green-color);
+    color:white;
+}
+.food-wrapper.product-wrapper .dishes-product{
+    height:180px;
+}
+.product-items{
+    padding:0 10px;
+}
+.food-descri{
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.from-group{
+    display: flex;
+    margin-top:15px;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.form-label{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+.form-control{
+    width: 320px;
+    height:38px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    border:1px solid #ccc;
+    outline: none;
+    padding-left: 10px;
+    background-color: #fafafa;
+
+}
+.form-control:focus{
+    outline: 1px solid rgb(47, 121, 206);
+    border:none
+}
+.form-submit{
+    position:absolute;
+    margin-top:20px;
+    width: 300px;
+    height:40px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(0, 150, 255);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    bottom: 20px;
+    
+}
+.form-submit:hover{
+    background-color: rgb(0, 200, 255);
+}
+.form-message {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+  }
+.invalid .form-control{
+    border-color: #f33a58;
+  }
+.invalid .form-message{
+    color:#f33a58;
+  }
+.genderdiv{
+    margin:10px 0 0 10px;
+    font-size: 1.3rem;
+}
+.Order{
+    background-color: var(--background-color);
+    padding-bottom: 10px;
+}
+.form-wrapper{
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position:relative;
+    padding-bottom: 80px;
+}
+.form-control:last-child{
+    height:200px;
+}
+.footer-headding{
+    color:var(--blue-color);
+
+}
+.footer-list{
+    list-style: none;
+    margin-top:10px;
+
+}
+.footer-items{
+    text-decoration: none;
+    color: var(--text-color);
+    padding:5px;
+}
+.footer-links{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.footer-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-links:hover{
+    text-decoration: solid;
+    color:var(--blue-color);
+}
+.footer-map{
+    display: block;
+    background-image: url(/_07_sell-web/assets/image/map.png);
+    width:60%;
+    background-size: contain;
+    height: 400px;
+    margin:40px 20%;
+    background-repeat: no-repeat;
+}
+

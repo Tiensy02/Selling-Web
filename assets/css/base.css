@@ -2,14 +2,24 @@
  :root{
     --white-color:#fff;
     --black-color:#000;
-    --text-color:#333;
+    --text-color:rgb(132, 132, 132);
     --primary-color:rgb(184, 181, 181);
-    
+    --green-color:#26ae60;
+    --product-color:rgb(76, 1, 161);
+    --blue-color:#1c426d;
+    --background-color:#f8f6f6;
 }
  *{
     box-sizing: border-box;
  }
-
+ p{
+   margin:0;
+ }
+ ul{
+   margin:0;
+   padding:0;
+ }
+ 
  .btn{
     height: 30px;
     display: flex;
