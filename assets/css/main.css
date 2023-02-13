@@ -38,10 +38,20 @@
     border-radius: 50%;
     margin:5px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 .header__search.btn:hover{
-    opacity: 0.8;
+    background-color: var(--green-color);
+    color: white;
 }
+.header__search.btn:hover i {
+    transform:rotate(360deg);
+    transition: all 0.3s;
+}
+.header__search.btn:first-child{
+    display: none;
+}
+
                        /*SLIDES*/
 .Home-selection{
     margin-top: 20px;
