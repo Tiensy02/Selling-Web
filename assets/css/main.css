@@ -2,6 +2,7 @@
 .header{
     background-image: linear-gradient(white,#f8f6f6);
     box-shadow: 0 2px 4px var(--primary-color);
+    
 }
 .logo{
     height: 60px;
@@ -37,22 +38,23 @@
     border-radius: 50%;
     margin:5px;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 .header__search.btn:hover{
     background-color: var(--green-color);
+    color: white;
 }
-.header__search.btn:hover i{
-    transform: rotate(360deg);
-    transition: 0.5s;
+.header__search.btn:hover i {
+    transform:rotate(360deg);
+    transition: all 0.3s;
 }
-.header-category{
+.header__search.btn:first-child{
     display: none;
 }
 
                        /*SLIDES*/
 .Home-selection{
-    margin-top: 20px;
+    padding-top: 20px;
 }
 .slides{
     display: flex;
@@ -85,11 +87,12 @@
 }
 .slide-contain .btn{
     width:150px;
-    margin-top:20px;
 }
 .slide-contain .btn:hover{
-    background-color: var(--blue-color);
-    
+    box-shadow: 0 5px 2px #ccc;
+}
+.slide-contain .btn:active{
+    transform: translateY(5px);
 }
 
 
@@ -98,6 +101,7 @@
     background-color: #eff1f3;
 }
 .dishes-heading{
+    margin-top:20px;
     padding:20px 0;
     text-align: center;
 }
@@ -114,7 +118,7 @@
                 /*PRODUCT*/
 .dishes-product{
     width:100%;
-    height: 230px;
+    height: 230px; 
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -234,6 +238,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+                    /*FEED BACK*/
 .feedback-slides{
     width:350px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
@@ -278,7 +283,7 @@
     overflow: hidden;
 
 }
-                    /*Menu*/
+                /*MENU*/
 .Menu{
     background-color:var(--background-color) ;
 }
@@ -287,13 +292,14 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 .food-items{
     padding:10px;
     color: black;
     border-radius: 50%;
-    border: 3px solid var(--green-color);
-    margin-right: 5px;
+    border: 2px solid var(--green-color);
+    margin:10px;
     cursor: pointer;
 }
 .food-items.active{
@@ -316,8 +322,11 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
-
-                    /*Form*/
+                /*ORDER*/
+.form-wrapper{
+    width:640px;
+    margin: 0 auto;
+}
 .from-group{
     display: flex;
     margin-top:15px;
@@ -333,14 +342,14 @@
 
 }
 .form-control{
-    width: 320px;
+ 
     height:38px;
     border-radius: 4px;
     font-size: 1.4rem;
     border:1px solid #ccc;
     outline: none;
     padding-left: 10px;
-    background-color: #fafafa;
+    background-color: #fafafa; 
 
 }
 .form-control:focus{
