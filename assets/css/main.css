@@ -2,7 +2,6 @@
 .header{
     background-image: linear-gradient(white,#f8f6f6);
     box-shadow: 0 2px 4px var(--primary-color);
-    
 }
 .logo{
     height: 60px;
@@ -38,10 +37,19 @@
     border-radius: 50%;
     margin:5px;
     cursor: pointer;
+    transition: all 0.5s;
 }
 .header__search.btn:hover{
-    opacity: 0.8;
+    background-color: var(--green-color);
 }
+.header__search.btn:hover i{
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+.header-category{
+    display: none;
+}
+
                        /*SLIDES*/
 .Home-selection{
     margin-top: 20px;
@@ -77,12 +85,11 @@
 }
 .slide-contain .btn{
     width:150px;
+    margin-top:20px;
 }
 .slide-contain .btn:hover{
-    box-shadow: 0 5px 2px #ccc;
-}
-.slide-contain .btn:active{
-    transform: translateY(5px);
+    background-color: var(--blue-color);
+    
 }
 
 
@@ -271,6 +278,7 @@
     overflow: hidden;
 
 }
+                    /*Menu*/
 .Menu{
     background-color:var(--background-color) ;
 }
@@ -308,6 +316,8 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
+
+                    /*Form*/
 .from-group{
     display: flex;
     margin-top:15px;
