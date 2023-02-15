@@ -2,7 +2,11 @@
 .header{
     background-image: linear-gradient(white,#f8f6f6);
     box-shadow: 0 2px 4px var(--primary-color);
-    
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    z-index: 2;
 }
 .logo{
     height: 60px;
@@ -54,7 +58,7 @@
 
                        /*SLIDES*/
 .Home-selection{
-    padding-top: 20px;
+    margin-top: 80px;
 }
 .slides{
     display: flex;
