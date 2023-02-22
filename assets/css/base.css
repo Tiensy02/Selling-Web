@@ -3,7 +3,7 @@
     --white-color:#fff;
     --black-color:#000;
     --text-color:rgb(132, 132, 132);
-    --primary-color:rgb(184, 181, 181);
+    --primary-color:rgb(184, 181, 181); 
     --green-color:#26ae60;
     --product-color:rgb(76, 1, 161);
     --blue-color:#1c426d;
@@ -11,6 +11,9 @@
 }
  *{
     box-sizing: border-box;
+ }
+ html{
+   scroll-padding-top: 70px;
  }
  p{
    margin:0;

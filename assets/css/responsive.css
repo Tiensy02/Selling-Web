@@ -4,7 +4,7 @@
             display: none;
         }
         .header__search.btn:first-child{
-            display: flex;
+            display: flex; 
         }
         .add-cart{
             padding: 0 10px;
