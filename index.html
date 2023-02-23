@@ -15,6 +15,7 @@
 </head>
 <body>
     <div class="app">
+                    <!--HEADER-->
         <div class="header">
             <div class="grid wide">
                 <div class="header-navbar">
@@ -40,6 +41,7 @@
                             <a href="#Order" class="items-link btn">Order</a>
                         </li>
                     </ul>
+                                <!--EXTENTION-->
                     <div class="header__navbar-extentions">
                         <div class="header-icon header-extention-bar">
                             <i class="fa-solid fa-bars"></i>
@@ -64,8 +66,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="header-icon icon-active">
+                        <div class="header-icon extention-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" class="search" placeholder="Search">  
                         </div>
                         <div class="header-icon">
                             <i class="fa-regular fa-heart"></i>
@@ -77,6 +80,7 @@
                 </div>
             </div>
         </div>
+                    <!--HOME SELECTOR-->
         <div class="Home-selection">    
              <div class="grid wide">
                 <div class="swiper slider-wrapper">
@@ -126,7 +130,9 @@
                 </div>
             </div>
         </div>
+                    <!--CONTAIN-->
         <div class="contain">
+                            <!--DISHES-->
                 <div class="dishes" id="Dishes">
                     <div class="grid wide min-wide">
                         <div class="dishes-heading">
@@ -277,6 +283,7 @@
                         </div>
                     </div>
                 </div>
+                            <!--ABOUT US-->
                 <div class="about-us" id="About">
                     <div class="grid wide min-wide">
                         <div class="dishes-heading">
@@ -321,6 +328,7 @@
                         </div>
                     </div>
                 </div>
+                            <!--MENU-->
                 <div class="Menu" id="Menu">
                     <div class="grid wide min-wide">
                         <div class="dishes-heading">
@@ -514,6 +522,7 @@
                         </div>
                     </div>
                 </div>
+                                <!--REVIEW-->
                 <div class="Review" id="Review">
                     <div class="grid wide min-wide">
                         <div class="dishes-heading">
@@ -615,6 +624,7 @@
                         </div>
                     </div>
                 </div>
+                                <!--ORDER-->
                 <div class="Order" id="Order">
                     <div class="grid wide min-wide">
                             <div class="dishes-heading">
@@ -634,17 +644,17 @@
                                             <span class="form-message"></span>
                                         </div>
                                         <div class="from-group">
-                                            <label for="quantity" class="form-label">How many guys do you have ?</label>
+                                            <label for="quantity" class="form-label">How many people will be in your party ?</label>
                                             <input id="quantity" name="quantity" type="text" class="form-control">
                                             <span class="form-message"></span>
                                         </div>
                                         <div class="from-group">
-                                            <label for="time" class="form-label">What time woudl you like ?</label>
+                                            <label for="time" class="form-label">What time will you be joining us ?</label>
                                             <input id="time" name="time" type="text"class="form-control">
                                             <span class="form-message"></span>
                                         </div>
                                         <div class="from-group">
-                                            <label for="note-order" class="form-label">Is there something do you want ?</label>
+                                            <label for="note-order" class="form-label">Is there any additional requests you may have ?</label>
                                             <textarea  id="note-order" name="note-order" type="text"class="form-control" rows="6" style="height:auto"> </textarea>
                                             <span class="form-message"></span>
                                         </div>
@@ -655,6 +665,7 @@
                     </div>
                 </div>
         </div>
+                    <!--FOOTER-->
         <div class="footer">
             <div class="grid wide min-wide">
                 <div class="footer-wrapper">
@@ -701,5 +712,23 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/script/slide.js"></script> 
     <script src="./assets/script/script1.js"></script>
+    <script src="./assets/script/validator.js"></script>
+    <script>
+        Validator({
+            form:"#form-1",
+            form_group:".from-group",
+            errorMess:".form-message",
+            rules: [
+                Validator.isRequired('#fullname',"Would you kindly provide your full name"),
+                Validator.isEmail('#email',"email not exits"),
+                Validator.isRequired('#time',"Would you kindly provide your time"),
+                Validator.isRequired('#quantity',"Would you kindly provide")
+            ],
+            onSubmit:function(data){
+                console.log(data) 
+            }
+        });
+    </script>
+    
 </body>
 </html>

@@ -18,6 +18,9 @@
         .about-us-contain{
             margin: 0 10px;
         }
+        .header-icon:first-child{
+            display: flex;
+        } 
       
     }
 /*  tablet-moblie */
@@ -54,6 +57,7 @@
             display: flex;
             justify-content: center;
         }
+        
       
     }
 /*   Mobile */
