@@ -2,7 +2,7 @@
 .header{
     background-image: linear-gradient(white,#f8f6f6); 
     box-shadow: 0 2px 4px var(--primary-color);
-    position:fixed;
+    position:fixed; 
     left:0;
     top:0;
     right:0;
@@ -490,8 +490,8 @@
     top:35px;
     display: none;
 }
-.search:focus{
-    display: flex;
+                        /*AUTHENFORM*/
+.authen-form{
+    width:500px;
+    height: 500px ;
 }
-
-

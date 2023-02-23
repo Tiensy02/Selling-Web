@@ -3,7 +3,7 @@
         .header__navbar-list{
             display: none;
         }
-        .header__search.btn:first-child{
+        .header__search.btn:first-child{ 
             display: flex; 
         }
         .add-cart{

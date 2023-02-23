@@ -3,7 +3,7 @@ function close(selector) {
   selector.style.display = "none"
 }
 function openFlex(selector) {
-  selector.style.display = "flex"
+  selector.style.display = "flex" 
 }
 function openBlock(selector) {
   selector.style.display = "block"

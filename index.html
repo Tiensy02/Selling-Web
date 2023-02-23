@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <title>Document</title>
@@ -529,7 +529,7 @@
                             <span class="note">Customer's Review</span>
                             <h2 class="headding">WHAT THEY SAY</h2>
                         </div>
-                        <div class="swiper feedback-wrap">
+                        <div class="swiper feedback-wrap" style="z-index: 0;">
                             <div class="swiper-wrapper feedback-box">
                                 <div class="swiper-slide feedback-slides">
                                     <div class="feedback-headding">
@@ -708,6 +708,31 @@
                 </a>
             </div>
         </div>
+        <div class="modal">
+            <div class="modal__overlay">
+                <div class="modal-body">
+                    <div class="authen-form sign-up">
+                        <form class="form" id="form-2">
+                            <div class="from-group">
+                                <label for="fullname" class="form-label">Your name</label>
+                                <input id="fullname" name="fullname" type="text" placeholder="VD:enter your name" class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="from-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input id="email" name="email" type="text" placeholder="VD:abc@gmail.com" class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="from-group">
+                                <label for="email" class="form-label">PassWord</label>
+                                <input id="email" name="email" type="text"class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <button class="form-submit">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/script/slide.js"></script> 

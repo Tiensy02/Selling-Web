@@ -5,7 +5,7 @@ function Validator(options) {
             if (element.parentElement.matches(selector)){
                 return element.parentElement;
             }
-            element=element.parentElement;
+            element=element.parentElement; 
         }
     }
     console.log(formElement)
