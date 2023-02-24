@@ -76,6 +76,10 @@
                         <div class="header-icon">
                             <i class="fa-solid fa-cart-shopping"></i> 
                         </div>
+                        <div class="header-icon icon-user">
+                            <i class="fa-regular fa-user"></i>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -632,15 +636,15 @@
                                 <h2 class="headding">FREE AND FAST</h2>
                             </div>
                             <div class="form-wrapper">
-                                <form action="https://www.messenger.com/t/100013857525971" method="POST" class="form" id="form-1">
+                                <form class="form" id="form-1">
                                         <div class="from-group">
                                             <label for="fullname" class="form-label">Your name</label>
-                                            <input id="fullname" name="fullname" type="text" placeholder="VD:enter your name" class="form-control">
+                                            <input id="fullname1" name="fullname" type="text" placeholder="VD:enter your name" class="form-control">
                                             <span class="form-message"></span>
                                         </div>
                                         <div class="from-group">
                                             <label for="email" class="form-label">Email</label>
-                                            <input id="email" name="email" type="text" placeholder="VD:abc@gmail.com" class="form-control">
+                                            <input id="email1" name="email" type="text" placeholder="VD:abc@gmail.com" class="form-control">
                                             <span class="form-message"></span>
                                         </div>
                                         <div class="from-group">
@@ -708,52 +712,77 @@
                 </a>
             </div>
         </div>
-        <div class="modal">
+        <div class="modal modal-authen">
             <div class="modal__overlay">
                 <div class="modal-body">
-                    <div class="authen-form sign-up">
+                    <div class="authen-form sign-up" id="Sign-up">
+                        <div class="authen-form-header">
+                           <p>Sign Up</p>
+                           <p>Login</p>
+                        </div>
                         <form class="form" id="form-2">
                             <div class="from-group">
                                 <label for="fullname" class="form-label">Your name</label>
-                                <input id="fullname" name="fullname" type="text" placeholder="VD:enter your name" class="form-control">
+                                <input id="fullname2" name="fullname" type="text" placeholder="VD:enter your name" class="form-control">
                                 <span class="form-message"></span>
                             </div>
                             <div class="from-group">
                                 <label for="email" class="form-label">Email</label>
-                                <input id="email" name="email" type="text" placeholder="VD:abc@gmail.com" class="form-control">
+                                <input id="email2" name="email" type="text" placeholder="VD:abc@gmail.com" class="form-control">
                                 <span class="form-message"></span>
                             </div>
                             <div class="from-group">
-                                <label for="email" class="form-label">PassWord</label>
-                                <input id="email" name="email" type="text"class="form-control">
+                                <label for="password" class="form-label">PassWord</label>
+                                <input id="password" name="password" type="password"class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="from-group">
+                                <label for="password-confirmation" class="form-label">Confirm PassWord</label>
+                                <input id="password-confirmation" name="password-confirmation" type="password" class="form-control">
                                 <span class="form-message"></span>
                             </div>
                             <button class="form-submit">Sign Up</button>
                         </form>
+                        
+                    </div>
+                    <div class="authen-form Login hide" id="Login">
+                        <div class="authen-form-header">
+                            <p>Login</p>
+                            <p>Sign Up</p>
+                        </div>
+                        <form class="form" id="form-3">
+                            <div class="from-group">
+                                <label for="fullname" class="form-label">Your name</label>
+                                <input id="fullname3" name="fullname" type="text"class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="from-group">
+                                <label for="password" class="form-label">PassWord</label>
+                                <input id="password3" name="password" type="password"class="form-control">
+                                <span class="form-message"></span>
+                            </div>
+                            <button class="form-submit">Login</button>
+                        </form>
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
+        <div class="modal modal-order">
+            <div class="modal__overlay">
+                <div class="modal-body">
+                    <div class="confirm-order">
+                        <p>Successful <i class="fa-solid fa-circle-check"></i> </p>
+                        <p style="font-size:1.2rem;color:rgb(231, 65, 65)">Please, check your email</p>
+                        <a href= "" class="btn btn-active">OK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/script/validator.js"></script>
     <script src="./assets/script/slide.js"></script> 
     <script src="./assets/script/script1.js"></script>
-    <script src="./assets/script/validator.js"></script>
-    <script>
-        Validator({
-            form:"#form-1",
-            form_group:".from-group",
-            errorMess:".form-message",
-            rules: [
-                Validator.isRequired('#fullname',"Would you kindly provide your full name"),
-                Validator.isEmail('#email',"email not exits"),
-                Validator.isRequired('#time',"Would you kindly provide your time"),
-                Validator.isRequired('#quantity',"Would you kindly provide")
-            ],
-            onSubmit:function(data){
-                console.log(data) 
-            }
-        });
-    </script>
+    
     
 </body>
 </html>

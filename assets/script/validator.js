@@ -8,7 +8,6 @@ function Validator(options) {
             element=element.parentElement; 
         }
     }
-    console.log(formElement)
     var selectorRules = [];
 
         // hàm thực thi các rule
@@ -34,6 +33,7 @@ function Validator(options) {
                 errorElement.innerText="";
                 errorElement.parentElement.classList.remove("invalid")
             } 
+          
             return !errorMessage;
         }
     if (formElement) {
@@ -119,7 +119,7 @@ Validator.isPassword = function(selector,min,message){
     return {
         selector:selector,
         test:function(value) {
-            return value.length >= min ? undefined : message||"Nhập tối thiểu " + min +" kí tự"
+            return value.length >= min ? undefined : message + min ||"Nhập tối thiểu " + min +" kí tự"
         }
     }
 }
@@ -131,3 +131,61 @@ Validator.isconfirmation = function(selector,getconfim,message){
         }
     }
 }
+var modalAuthen = document.querySelector(".modal.modal-authen")
+var modalOrder = document.querySelector(".modal.modal-order")
+function close(element){
+    element.style.display = "none"
+}
+function open(element){
+    element.style.display = "block"
+}
+var modalBtn = modalOrder.querySelector(".btn")
+modalBtn.onclick = function(){
+    close(modalOrder)
+}
+
+Validator({
+    form:"#form-1",
+    form_group:".from-group",
+    errorMess:".form-message",
+    rules: [
+        Validator.isRequired('#fullname1',"Would you kindly provide your full name"),
+        Validator.isEmail('#email1',"email not exits"),
+        Validator.isRequired('#time',"Would you kindly provide your time"),
+        Validator.isRequired('#quantity',"Would you kindly provide")
+    ],
+    onSubmit:function(data){
+        console.log(data) 
+       open(modalOrder)
+    }
+});
+Validator({
+    form:"#form-2",
+    form_group:".from-group",
+    errorMess:".form-message",
+    rules: [
+        Validator.isRequired('#fullname2',"Would you kindly provide your full name"),
+        Validator.isEmail('#email2',"email not exits"),
+        Validator.isPassword("#password",6,"the minimum of length password is "),
+        Validator.isconfirmation('#password-confirmation',function(){
+            return document.querySelector("#form-2 #password").value;
+        },"the password is not same")
+    ],
+    onSubmit:function(data){
+        console.log(data) 
+        close(modalAuthen)
+    }
+});
+Validator({
+    form:"#form-3",
+    form_group:".from-group",
+    errorMess:".form-message",
+    rules: [
+        Validator.isRequired('#fullname3',"Would you kindly provide your full name"),
+        Validator.isRequired('#password3',"Would you kindly provide your password"),
+    ],
+    onSubmit:function(data){
+        console.log(data) 
+        close(modalAuthen)
+    }
+});

@@ -70,6 +70,9 @@
     background-color: var(--green-color);
     color: white;
 }
+#user-check{
+    display: none;
+}
 
                        /*SLIDES*/
 .Home-selection{
@@ -491,7 +494,44 @@
     display: none;
 }
                         /*AUTHENFORM*/
+.authen-form-header{
+    display: flex;
+    justify-content: space-between;
+}
 .authen-form{
-    width:500px;
-    height: 500px ;
+    align-self: center;
+    background-color: white;
+    animation: Surfing 0.5s linear;
+    border-radius: 4px;
+}
+.authen-form-header p {
+    color: var(--green-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 10px;
+    line-height: 1.6rem;
+    cursor: pointer;
+}
+.authen-form-header p:hover{
+    text-decoration-line: underline;
+}
+.authen-form.hide{
+    display: none;
+}
+.confirm-order{
+    background-color: white;
+    width: 300px;
+    animation: Surfing 0.5s linear;
+    color: var(--green-color);
+    border-radius: 4px;
+    height:200px;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin:auto;
+}
+.confirm-order a {
+    text-decoration: none;
 }

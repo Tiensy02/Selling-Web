@@ -57,9 +57,21 @@ function prevenPropagation(Element) {
 activeElement(headerExtentions,"icon-active",true)
 activeElement(itemLinks,"btn-active",false)
 activeElement(baritemlinks,"btn-active",false)
+              //AUTHENFORM
+const authenform = document.querySelectorAll(".authen-form")
+const authenheader = []
+authenform.forEach(function(value){
+  authenheader.push(value.querySelector(".authen-form-header"))
+})
+authenheader.forEach(function(value) {
+  value.children.item(1).onclick = function(){
+    authenform.forEach(function(authen){
+      authen.classList.toggle("hide")
+    })
+  }
+})
 prevenPropagation(headerExtentions)
 
-      //display sub-element
 
 
 
