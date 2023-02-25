@@ -133,6 +133,7 @@ Validator.isconfirmation = function(selector,getconfim,message){
 }
 var modalAuthen = document.querySelector(".modal.modal-authen")
 var modalOrder = document.querySelector(".modal.modal-order")
+var loginBtn = document.querySelector(".user-login")
 function close(element){
     element.style.display = "none"
 }
@@ -142,6 +143,9 @@ function open(element){
 var modalBtn = modalOrder.querySelector(".btn")
 modalBtn.onclick = function(){
     close(modalOrder)
+}
+loginBtn.onclick = function() {
+    open(modalAuthen)
 }
 
 Validator({
@@ -155,7 +159,7 @@ Validator({
         Validator.isRequired('#quantity',"Would you kindly provide")
     ],
     onSubmit:function(data){
-        console.log(data) 
+        console.log(typeof data) 
        open(modalOrder)
     }
 });

@@ -23,7 +23,7 @@
                     </div>
                     <ul class="header__navbar-list">
                         <li class="header__navbar-items">
-                            <a href="" class="items-link btn btn-active">Home</a> 
+                            <a href="Order" class="items-link btn btn-active">Home</a> 
                         </li>
                         <li class="header__navbar-items">
                             <a href="#Dishes" class="items-link btn">Dishes</a>
@@ -47,7 +47,7 @@
                             <i class="fa-solid fa-bars"></i>
                             <ul class="bar-selector">
                                 <li class="header__navbar-items">
-                                    <a href="" class="items-link btn btn-active">Home</a>
+                                    <a href="Order" class="items-link btn btn-active">Home</a>
                                 </li>
                                 <li class="header__navbar-items">
                                     <a href="#Dishes" class="items-link btn">Dishes</a>
@@ -70,15 +70,61 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <input type="text" class="search" placeholder="Search">  
                         </div>
-                        <div class="header-icon">
+                        <div class="header-icon favourite-icon">
                             <i class="fa-regular fa-heart"></i>
+                            <div class="user-favourite">
+                                <!-- <ul class="favourite-list">
+                                    <li class="favourite-list-items">
+                                        <div class="favourite-list-items__background" style="background-image: url(./assets/image/img-2.jpg);">
+                                        </div>
+                                        <div class="favourite-list-items__value">
+                                            <div class="cart-name-wrap">
+                                                <span class="headding">
+                                                   Chiken Pizza
+                                                </span>
+                                            </div>
+                                            <span class="price">
+                                                15.99$
+                                            </span>
+
+                                        </div>
+                                    </li>
+                                    <li class="favourite-list-items">
+                                        <div class="favourite-list-items__background" style="background-image: url(./assets/image/img-3.jpg);">
+                                            
+                                        </div>
+                                        <div class="favourite-list-items__value">
+                                            <div class="cart-name-wrap">
+                                                <span class="headding">
+                                                    Pizza
+                                                </span>
+                                            </div>
+                                            <span class="price">
+                                                15.99$
+                                            </span>
+
+                                        </div>
+                                        
+                                    </li>
+                                </ul> -->
+                                <span class="cart-list-msg">Chưa có sản phẩm</span>
+                                <img src="./assets/image/nocart.png" class="header__cart-no-cart-img" alt="">
+                            </div>
                         </div>
-                        <div class="header-icon">
-                            <i class="fa-solid fa-cart-shopping"></i> 
+                        <div class="header-icon cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="header__cart-list">
+                                <span class="cart-list-msg">Chưa có sản phẩm</span>
+                                <img src="./assets/image/nocart.png" class="header__cart-no-cart-img" alt="">
+                            </div> 
                         </div>
                         <div class="header-icon icon-user">
                             <i class="fa-regular fa-user"></i>
-                            
+                            <div class="user-infomation">
+                                <span>You are not logged in yet</span>
+                                <button class="user-login btn btn-active">Login</button>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,7 +140,7 @@
                                     <span>Our Special Dish</span>
                                     <h2>HOT PIZZA</h2>
                                     <p>  Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients</p>
-                                    <a href="#" class="items-link btn btn-active"> Order Now</a>
+                                    <a href="#Order" class="items-link btn btn-active"> Order Now</a>
                                 </div>
                                 <div class="slide-image" style="background-image: url(./assets/image/img-2.jpg);">
                                 </div>
@@ -104,7 +150,7 @@
                                 <span>Our Special Dish</span>
                                 <h2>TIRAMISU</h2>
                                 <p>  Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients</p>
-                                <a href="#" class="items-link btn btn-active"> Order Now</a>
+                                <a href="#Order" class="items-link btn btn-active"> Order Now</a>
                             </div>
                             <div class="slide-image" style="background-image: url(./assets/image/img-5.jpg);">
                             </div>
@@ -114,7 +160,7 @@
                                     <span>Our Special Dish</span>
                                     <h2>COLD PIZZA</h2>
                                     <p>  Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients</p>
-                                    <a href="#" class="items-link btn btn-active"> Order Now</a>
+                                    <a href="#Order" class="items-link btn btn-active"> Order Now</a>
                                 </div>
                                 <div class="slide-image" style="background-image: url(./assets/image/img-3.jpg);">
                                 </div>
@@ -124,7 +170,7 @@
                                     <span>Our Special Dish</span>
                                     <h2>CANH</h2>
                                     <p>  Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients</p>
-                                    <a href="#" class="items-link btn btn-active"> Order Now</a>
+                                    <a href="#Order" class="items-link btn btn-active"> Order Now</a>
                                 </div>
                                 <div class="slide-image" style="background-image: url(./assets/image/img-4.jpg);">
                                 </div>
@@ -715,7 +761,7 @@
         <div class="modal modal-authen">
             <div class="modal__overlay">
                 <div class="modal-body">
-                    <div class="authen-form sign-up" id="Sign-up">
+                    <div class="authen-form sign-up hide" id="Sign-up">
                         <div class="authen-form-header">
                            <p>Sign Up</p>
                            <p>Login</p>
@@ -745,7 +791,7 @@
                         </form>
                         
                     </div>
-                    <div class="authen-form Login hide" id="Login">
+                    <div class="authen-form Login" id="Login">
                         <div class="authen-form-header">
                             <p>Login</p>
                             <p>Sign Up</p>

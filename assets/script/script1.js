@@ -70,6 +70,13 @@ authenheader.forEach(function(value) {
     })
   }
 })
+function User (name,email,cart,favourite) {
+  this.name = name
+  this.email = email
+  this.cart = cart
+  this.favourite = favourite
+}
+
 prevenPropagation(headerExtentions)
 
 
