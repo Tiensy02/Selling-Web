@@ -23,7 +23,7 @@
                     </div>
                     <ul class="header__navbar-list">
                         <li class="header__navbar-items">
-                            <a href="Order" class="items-link btn btn-active">Home</a> 
+                            <a href="" class="items-link btn btn-active">Home</a> 
                         </li>
                         <li class="header__navbar-items">
                             <a href="#Dishes" class="items-link btn">Dishes</a>
@@ -120,10 +120,17 @@
                         </div>
                         <div class="header-icon icon-user">
                             <i class="fa-regular fa-user"></i>
-                            <div class="user-infomation">
-                                <span>You are not logged in yet</span>
-                                <button class="user-login btn btn-active">Login</button>
-                                
+                            <div class="User-wrap">
+                                <div class="user-infomation user-none">
+                                    <span>You are not logged in yet</span>
+                                    <button class="user-login btn btn-active">Login</button>
+                                </div>
+                                <div class="user-infomation user hide">
+                                    <a href="#" class="user-links btn">My acount</a>
+                                    <a href="#" class="user-links btn">Log out</a>
+                                    <a href="" class="user-login btn btn-active"> Log out</a>
+                                    <input type="checkbox" class="check-login">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -807,6 +814,7 @@
                                 <input id="password3" name="password" type="password"class="form-control">
                                 <span class="form-message"></span>
                             </div>
+                            <div class="login-mess"></div>
                             <button class="form-submit">Login</button>
                         </form>
                     </div>

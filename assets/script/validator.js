@@ -134,11 +134,31 @@ Validator.isconfirmation = function(selector,getconfim,message){
 var modalAuthen = document.querySelector(".modal.modal-authen")
 var modalOrder = document.querySelector(".modal.modal-order")
 var loginBtn = document.querySelector(".user-login")
+var inputElement = document.querySelectorAll(".form-control")
+const userInfomation = document.querySelectorAll(".user-infomation")
+var checkUser = document.querySelector(".check-login")
 function close(element){
     element.style.display = "none"
 }
+
+function toggleHiden(Element){
+    Element.forEach(function(value) {
+      value.classList.toggle("hide")
+    })
+  }
+
 function open(element){
     element.style.display = "block"
+}
+function checkLogin(inputName,inputPassword,Users){
+    for(let i = 0 ; i < Users.length; i ++ ) {
+        if(inputName==Users[i].name) {
+            if(inputPassword == Users[i].password) {
+                return true
+            }
+        }
+    }
+    return false;
 }
 var modalBtn = modalOrder.querySelector(".btn")
 modalBtn.onclick = function(){
@@ -146,6 +166,11 @@ modalBtn.onclick = function(){
 }
 loginBtn.onclick = function() {
     open(modalAuthen)
+}
+function cleanInput(element) {
+    element.forEach(function(input) {
+        input.value = ""
+    })
 }
 
 Validator({
@@ -159,7 +184,7 @@ Validator({
         Validator.isRequired('#quantity',"Would you kindly provide")
     ],
     onSubmit:function(data){
-        console.log(typeof data) 
+        console.log(data) 
        open(modalOrder)
     }
 });
@@ -176,7 +201,9 @@ Validator({
         },"the password is not same")
     ],
     onSubmit:function(data){
-        console.log(data) 
+        var step = data.allValue
+        Users.push(new User(step.fullname,step.email,step.password,{},{}))
+        cleanInput(inputElement)
         close(modalAuthen)
     }
 });
@@ -189,7 +216,13 @@ Validator({
         Validator.isRequired('#password3',"Would you kindly provide your password"),
     ],
     onSubmit:function(data){
-        console.log(data) 
-        close(modalAuthen)
+        if(checkLogin(data.allValue.fullname,data.allValue.password,Users)) {
+            toggleHiden(userInfomation)
+            cleanInput(inputElement)
+            checkUser.checked = true;
+            close(modalAuthen)
+        }else {
+            document.querySelector(".login-mess").innerHTML = "Name or Password wrong !"
+        }
     }
 });

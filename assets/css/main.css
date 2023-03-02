@@ -42,7 +42,7 @@
     border-radius: 50%; 
     margin:5px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.1s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,7 +291,7 @@
     color: var(--green-color);
     font-size: 1.2rem;
     margin-left:70%;
-    transition: color 0.5s;
+    transition: color 0.2s;
     padding:5px 0;
 }
 .feedback-more:hover{
@@ -406,6 +406,12 @@
 .invalid .form-message{
     color:#f33a58;
   }
+.login-mess{
+    width:284px;
+    height: 36px;
+    color:#f33a58;
+    margin:0 auto;
+}
 .genderdiv{
     margin:10px 0 0 10px;
     font-size: 1.3rem;
@@ -502,10 +508,26 @@
     width: 250px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    display: none;
     color: var(--green-color);
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
+}
+.user-infomation.user{
+    width:180px;
+    left: -60px;
+}
+.user-links{
+    text-decoration: none;
+
+}
+.user-links.btn:hover{
+    background-color: #e7e9eb;
+    color: var(--green-color);
+}
+.user-infomation.hide{
+    display: none;
 }
 .user-infomation span{
     font-size: 1.3rem;
@@ -515,6 +537,13 @@
     cursor: pointer;
     border: none;
     margin: 10px 20px;
+    text-decoration: none;
+}
+.User-wrap{
+    display: none;
+}
+.check-login{
+    display: none;
 }
 .user-login:hover{
     box-shadow: 0px 5px 2px #ccc;

@@ -15,8 +15,14 @@ var navbarList = document.querySelector(".header__navbar-list")
 var barSelect = document.querySelector(".bar-selector")
 const barlinks = barSelect.querySelectorAll(".header__navbar-items")
 const navbarItems = navbarList.querySelectorAll(".header__navbar-items")
+const modal = document.querySelectorAll(".modal")
 const itemLinks = [];
-const baritemlinks = []
+const baritemlinks = [];
+modal.forEach(function(value) {
+  value.onclick = function() {
+    value.style.display = "none"
+  }
+})
 navbarItems.forEach(function(value) {
   itemLinks.push(value.querySelector(".items-link.btn"))
 })
@@ -54,6 +60,13 @@ function prevenPropagation(Element) {
     })
   })
 }
+const modalBody = document.querySelectorAll(".modal-body")
+modalBody.forEach(function(value) {
+  value.addEventListener('click',function(e){
+    e.stopPropagation();
+  })
+})
+
 activeElement(headerExtentions,"icon-active",true)
 activeElement(itemLinks,"btn-active",false)
 activeElement(baritemlinks,"btn-active",false)
@@ -70,14 +83,33 @@ authenheader.forEach(function(value) {
     })
   }
 })
-function User (name,email,cart,favourite) {
+
+function User (name,email,password,cart,favourite) {
   this.name = name
   this.email = email
+  this.password = password
   this.cart = cart
   this.favourite = favourite
 }
+const Users = [new User('nguyentiensy',"tiensy002@gmail.com",'123456',{},{})] 
+          // Check Users
+const favouriteIcon = document.querySelectorAll(".product-favorite")
+const viewIcon = document.querySelectorAll(".product-view")
+const addButton = document.querySelectorAll(".add-cart")
+function afterCheckLogin(element) {
 
+  element.forEach(function(icon){
+    icon.onclick = function() {
+      if(!checkUser.checked) {
+        open(modalAuthen)
+      }
+    }
+  })
+}
+afterCheckLogin(favouriteIcon)
+afterCheckLogin(addButton)
 prevenPropagation(headerExtentions)
+
 
 
 
