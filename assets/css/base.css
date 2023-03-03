@@ -68,8 +68,19 @@
    border-radius:4px;
    margin:auto;
    width: 400px;
-}
+} 
 @keyframes Surfing {
    from {transform: translateY(-100%);}
    to {transform: translateY(0);}
  }
+ @keyframes Grow{
+   0%{
+       transform: scale(0);
+       opacity: 0;
+
+   }
+   100%{
+       opacity: 1;
+       transform: scale(1);
+   }
+}

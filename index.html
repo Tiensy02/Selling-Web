@@ -23,7 +23,7 @@
                     </div>
                     <ul class="header__navbar-list">
                         <li class="header__navbar-items">
-                            <a href="" class="items-link btn btn-active">Home</a> 
+                            <a href="#Home" class="items-link btn btn-active">Home</a> 
                         </li>
                         <li class="header__navbar-items">
                             <a href="#Dishes" class="items-link btn">Dishes</a>
@@ -47,7 +47,7 @@
                             <i class="fa-solid fa-bars"></i>
                             <ul class="bar-selector">
                                 <li class="header__navbar-items">
-                                    <a href="Order" class="items-link btn btn-active">Home</a>
+                                    <a href="#Home" class="items-link btn btn-active">Home</a>
                                 </li>
                                 <li class="header__navbar-items">
                                     <a href="#Dishes" class="items-link btn">Dishes</a>
@@ -73,8 +73,51 @@
                         <div class="header-icon favourite-icon">
                             <i class="fa-regular fa-heart"></i>
                             <div class="user-favourite">
-                                <!-- <ul class="favourite-list">
+                                <ul class="favourite-list">
+                                    <!-- <li class="favourite-list-items">
+                                        <div class="favourite-list-items__background" style="background-image: url(./assets/image/img-2.jpg);">
+                                        </div>
+                                        <div class="favourite-list-items__value">
+                                            <div class="cart-name-wrap">
+                                                <span class="headding">
+                                                   Chiken Pizza 
+                                                </span>
+                                            </div>
+                                            <span class="price">
+                                                15.99$
+                                            </span>
+
+                                        </div>
+                                    </li>
                                     <li class="favourite-list-items">
+                                        <div class="favourite-list-items__background" style="background-image: url(./assets/image/img-3.jpg);">
+                                            
+                                        </div>
+                                        <div class="favourite-list-items__value">
+                                            <div class="cart-name-wrap">
+                                                <span class="headding">
+                                                    Pizza
+                                                </span>
+                                            </div>
+                                            <span class="price">
+                                                15.99$
+                                            </span>
+
+                                        </div>
+                                        
+                                    </li> -->
+                                </ul>
+                                <div class="favourite-wrap">
+                                    <span class="cart-list-msg">Chưa có sản phẩm</span>
+                                    <img src="./assets/image/nocart.png" class="header__cart-no-cart-img" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-icon cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="header__cart-list">
+                                <ul class="favourite-list">
+                                    <!-- <li class="favourite-list-items">
                                         <div class="favourite-list-items__background" style="background-image: url(./assets/image/img-2.jpg);">
                                         </div>
                                         <div class="favourite-list-items__value">
@@ -105,17 +148,12 @@
 
                                         </div>
                                         
-                                    </li>
-                                </ul> -->
-                                <span class="cart-list-msg">Chưa có sản phẩm</span>
-                                <img src="./assets/image/nocart.png" class="header__cart-no-cart-img" alt="">
-                            </div>
-                        </div>
-                        <div class="header-icon cart-icon">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <div class="header__cart-list">
-                                <span class="cart-list-msg">Chưa có sản phẩm</span>
-                                <img src="./assets/image/nocart.png" class="header__cart-no-cart-img" alt="">
+                                    </li> -->
+                                </ul>
+                                <div class="cart-list-wrap">
+                                    <span class="cart-list-msg">Chưa có sản phẩm</span>
+                                    <img src="./assets/image/nocart.png" class="header__cart-no-cart-img" alt="">
+                                </div>
                             </div> 
                         </div>
                         <div class="header-icon icon-user">
@@ -127,7 +165,7 @@
                                 </div>
                                 <div class="user-infomation user hide">
                                     <a href="#" class="user-links btn">My acount</a>
-                                    <a href="#" class="user-links btn">Log out</a>
+                                    <a href="#" class="user-links btn">My cart</a>
                                     <a href="" class="user-login btn btn-active"> Log out</a>
                                     <input type="checkbox" class="check-login">
                                 </div>
@@ -138,7 +176,7 @@
             </div>
         </div>
                     <!--HOME SELECTOR-->
-        <div class="Home-selection">    
+        <div class="Home-selection" id="Home">    
              <div class="grid wide">
                 <div class="swiper slider-wrapper">
                     <div class="swiper-wrapper slide-box">
@@ -218,6 +256,9 @@
                                     </div>
                                     <div class="product-view header-icon"><i class="fa-solid fa-eye"></i></div>
                                     <div class="product-favorite header-icon"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="product-descri">
+                                        <p>Pho is a traditional Vietnamese soup consisting of broth, rice noodles, and typically some combination of beef or chicken, herbs, and spices. It is a staple food in Vietnam and is also popular in many other countries, especially in Southeast Asia</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col l-4 m-4 c-6">
@@ -241,6 +282,9 @@
                                     </div>
                                     <div class="product-view header-icon"><i class="fa-solid fa-eye"></i></div>
                                     <div class="product-favorite header-icon"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="product-descri">
+                                        <p>Pho is a traditional Vietnamese soup consisting of broth, rice noodles, and typically some combination of beef or chicken, herbs, and spices. It is a staple food in Vietnam and is also popular in many other countries, especially in Southeast Asia</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col l-4 m-4 c-6">
@@ -264,6 +308,9 @@
                                     </div>
                                     <div class="product-view header-icon"><i class="fa-solid fa-eye"></i></div>
                                     <div class="product-favorite header-icon"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="product-descri">
+                                        <p>Pho is a traditional Vietnamese soup consisting of broth, rice noodles, and typically some combination of beef or chicken, herbs, and spices. It is a staple food in Vietnam and is also popular in many other countries, especially in Southeast Asia</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col l-4 m-4 c-6">
@@ -287,6 +334,9 @@
                                     </div>
                                     <div class="product-view header-icon"><i class="fa-solid fa-eye"></i></div>
                                     <div class="product-favorite header-icon"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="product-descri">
+                                        <p>Pho is a traditional Vietnamese soup consisting of broth, rice noodles, and typically some combination of beef or chicken, herbs, and spices. It is a staple food in Vietnam and is also popular in many other countries, especially in Southeast Asia</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col l-4 m-4 c-6">
@@ -310,6 +360,9 @@
                                     </div>
                                     <div class="product-view header-icon"><i class="fa-solid fa-eye"></i></div>
                                     <div class="product-favorite header-icon"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="product-descri">
+                                        <p>Pho is a traditional Vietnamese soup consisting of broth, rice noodles, and typically some combination of beef or chicken, herbs, and spices. It is a staple food in Vietnam and is also popular in many other countries, especially in Southeast Asia</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col l-4 m-4 c-6">
@@ -333,6 +386,9 @@
                                     </div>
                                     <div class="product-view header-icon"><i class="fa-solid fa-eye"></i></div>
                                     <div class="product-favorite header-icon"><i class="fa-solid fa-heart"></i></div>
+                                    <div class="product-descri">
+                                        <p>Pho is a traditional Vietnamese soup consisting of broth, rice noodles, and typically some combination of beef or chicken, herbs, and spices. It is a staple food in Vietnam and is also popular in many other countries, especially in Southeast Asia</p>
+                                    </div>
                                 </div>
                             </div>
                             

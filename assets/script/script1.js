@@ -91,23 +91,38 @@ function User (name,email,password,cart,favourite) {
   this.cart = cart
   this.favourite = favourite
 }
-const Users = [new User('nguyentiensy',"tiensy002@gmail.com",'123456',{},{})] 
+const Users = [new User('nguyentiensy',"tiensy002@gmail.com",'123456',[],[])] 
           // Check Users
 const favouriteIcon = document.querySelectorAll(".product-favorite")
 const viewIcon = document.querySelectorAll(".product-view")
 const addButton = document.querySelectorAll(".add-cart")
-function afterCheckLogin(element) {
-
+function afterCheckLogin(element,nameExtention) {
+ 
   element.forEach(function(icon){
-    icon.onclick = function() {
+    icon.onclick = function(e) {
       if(!checkUser.checked) {
         open(modalAuthen)
+      }else{
+
+        if(nameExtention == 'cart'){
+          acountCurrent.cart.push(e.target.parentElement.parentElement.parentElement)
+          close(document.querySelector(".cart-list-wrap"))
+        }else{
+          acountCurrent.favourite.push(e.target.parentElement)
+          close(document.querySelector(".favourite-wrap"))
+        }
       }
     }
   })
 }
-afterCheckLogin(favouriteIcon)
-afterCheckLogin(addButton)
+viewIcon.forEach(function(value) {
+  value.onclick = function(e) {
+    e.target.parentElement.querySelector(".product-descri").classList.toggle("appear")
+    e.target.parentElement.querySelector(".product-view").classList.toggle("view-active")
+  }
+})
+afterCheckLogin(favouriteIcon,'favourite')
+ afterCheckLogin(addButton,'cart')
 prevenPropagation(headerExtentions)
 
 

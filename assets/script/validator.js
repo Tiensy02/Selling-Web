@@ -137,13 +137,14 @@ var loginBtn = document.querySelector(".user-login")
 var inputElement = document.querySelectorAll(".form-control")
 const userInfomation = document.querySelectorAll(".user-infomation")
 var checkUser = document.querySelector(".check-login")
+var acountCurrent ={}
 function close(element){
     element.style.display = "none"
 }
 
-function toggleHiden(Element){
+function toggleElement(Element,arg){
     Element.forEach(function(value) {
-      value.classList.toggle("hide")
+      value.classList.toggle(arg)
     })
   }
 
@@ -154,6 +155,7 @@ function checkLogin(inputName,inputPassword,Users){
     for(let i = 0 ; i < Users.length; i ++ ) {
         if(inputName==Users[i].name) {
             if(inputPassword == Users[i].password) {
+                acountCurrent = Users[i]
                 return true
             }
         }
@@ -202,7 +204,7 @@ Validator({
     ],
     onSubmit:function(data){
         var step = data.allValue
-        Users.push(new User(step.fullname,step.email,step.password,{},{}))
+        Users.push(new User(step.fullname,step.email,step.password,[],[]))
         cleanInput(inputElement)
         close(modalAuthen)
     }
@@ -210,16 +212,16 @@ Validator({
 Validator({
     form:"#form-3",
     form_group:".from-group",
-    errorMess:".form-message",
+    errorMess:".form-message", 
     rules: [
         Validator.isRequired('#fullname3',"Would you kindly provide your full name"),
         Validator.isRequired('#password3',"Would you kindly provide your password"),
     ],
     onSubmit:function(data){
         if(checkLogin(data.allValue.fullname,data.allValue.password,Users)) {
-            toggleHiden(userInfomation)
-            cleanInput(inputElement)
+            toggleElement(userInfomation,"hide")
             checkUser.checked = true;
+            cleanInput(inputElement)
             close(modalAuthen)
         }else {
             document.querySelector(".login-mess").innerHTML = "Name or Password wrong !"

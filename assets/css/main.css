@@ -150,6 +150,27 @@
     border-radius: 3px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
+.product-descri{
+    position: absolute;
+    left: 0;
+    right:0;
+    bottom: 0;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    display: flex;
+    animation: Grow 0.5s ease;
+    display: none;
+    overflow: scroll; 
+}
+.product-descri.appear{
+    display: flex;
+}
+.product-descri p {
+    margin:50px 20px;
+   
+}
 .product-headding{
     text-align: center;
 }
@@ -186,6 +207,7 @@
     top:0;
     display: none;
     transition: background-color 0.5s,color 0.5s;
+    z-index: 1;
 }
 
 .product-favorite{
@@ -202,6 +224,10 @@
     display: flex;
 }
 .product-view:hover{
+    background-color: var(--green-color);
+    color: white;
+}
+.product-view.view-active{
     background-color: var(--green-color);
     color: white;
 }
@@ -516,7 +542,7 @@
 }
 .user-infomation.user{
     width:180px;
-    left: -60px;
+    left: -140px;
 }
 .user-links{
     text-decoration: none;
@@ -559,7 +585,6 @@
     top: 42px;
     background-color: white;
     box-shadow: 0 1px 4px #ccc;
-    width: 300px;
     border-radius: 2px;
     transform-origin: 80% top;
     animation: Grow 0.3s ease;
@@ -586,6 +611,7 @@
     font-size: 1.5rem;
     margin-top: 10px;
     margin-left: 20px;
+    width: 200px;
 }
 .header__cart:hover .header__cart-list{
     display: block ;
@@ -617,6 +643,12 @@
     color: var(--green-color);
     flex-direction: column;
     justify-content: space-around;
+    animation: Grow 0.5s ease;
+}
+.cart-list-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .favourite-list{ 
     font-size: 1.4rem;
@@ -626,6 +658,11 @@
     padding:0;
     max-height:50vh;
     overflow-y: scroll;
+}
+.favourite-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .favourite-list-items{
     display: flex;
@@ -654,6 +691,11 @@
     text-overflow: ellipsis;
     overflow: hidden;
     margin-right: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 50px;
 
 }
 
