@@ -72,3 +72,8 @@
         border-left: 1px solid #ccc;
     }
 }
+@media (max-width:599px ) {
+    .cart-name-wrap{
+        width : auto;
+    }
+}

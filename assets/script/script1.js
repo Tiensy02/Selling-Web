@@ -96,6 +96,8 @@ const Users = [new User('nguyentiensy',"tiensy002@gmail.com",'123456',[],[])]
 const favouriteIcon = document.querySelectorAll(".product-favorite")
 const viewIcon = document.querySelectorAll(".product-view")
 const addButton = document.querySelectorAll(".add-cart")
+var countIconCart = 0
+var countIconFavou = 0
 function afterCheckLogin(element,nameExtention) {
  
   element.forEach(function(icon){
@@ -105,11 +107,29 @@ function afterCheckLogin(element,nameExtention) {
       }else{
 
         if(nameExtention == 'cart'){
+          if ( !acountCurrent.cart.includes(e.target.parentElement.parentElement.parentElement)){
           acountCurrent.cart.push(e.target.parentElement.parentElement.parentElement)
+          const para = document.createElement("li");
+          para.classList.add("favourite-list-items");
+          document.querySelector(".cart-list").appendChild(para)
+          console.log(acountCurrent.cart[countIconCart].querySelector(".dishes-product").attributes.style.value)
+          para.innerHTML = '<div class="favourite-list-items__background" style="'+acountCurrent.cart[countIconCart].querySelector(".dishes-product").attributes.style.value+'"></div><div class="favourite-list-items__value"><div class="cart-name-wrap"><span class="headding"> '+acountCurrent.cart[countIconCart].querySelector(".headding").innerHTML+'</span></div><div class="buy-wrap"><span class="price">'+acountCurrent.cart[countIconCart].querySelector(".price").innerHTML+'</span><a href="#" class="buy btn btn-active">Buy Now</a></div></div>'
+          countIconCart++
           close(document.querySelector(".cart-list-wrap"))
+          }else {
+            alert("san pham da duoc them")
+          }
         }else{
+          if(!acountCurrent.favourite.includes(e.target.parentElement)){
           acountCurrent.favourite.push(e.target.parentElement)
+          const para = document.createElement("li");
+          para.classList.add("favourite-list-items");
+          document.querySelector(".favourite-list").appendChild(para)
+          console.log(acountCurrent.favourite[countIconFavou].querySelector(".dishes-product").attributes.style.value)
+          para.innerHTML = '<div class="favourite-list-items__background" style="'+acountCurrent.favourite[countIconFavou].querySelector(".dishes-product").attributes.style.value+'"></div><div class="favourite-list-items__value"><div class="cart-name-wrap"><span class="headding"> '+acountCurrent.favourite[countIconFavou].querySelector(".headding").innerHTML+'</span></div><span class="price">'+acountCurrent.favourite[countIconFavou].querySelector(".price").innerHTML+'</span> </div>'
+          countIconFavou++
           close(document.querySelector(".favourite-wrap"))
+          }else alert("san pham da duoc them")
         }
       }
     }
