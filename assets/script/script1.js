@@ -11,6 +11,7 @@ function openBlock(selector) {
             // HEADER-EXTENTION
 var headerExtentionBox= document.querySelector(".header__navbar-extentions")
 const headerExtentions = headerExtentionBox.querySelectorAll(".header-icon")
+const foodItems = document.querySelectorAll(".food-items")
 var navbarList = document.querySelector(".header__navbar-list")
 var barSelect = document.querySelector(".bar-selector")
 const barlinks = barSelect.querySelectorAll(".header__navbar-items")
@@ -70,6 +71,7 @@ modalBody.forEach(function(value) {
 activeElement(headerExtentions,"icon-active",true)
 activeElement(itemLinks,"btn-active",false)
 activeElement(baritemlinks,"btn-active",false)
+activeElement(foodItems,"active",false)
               //AUTHENFORM
 const authenform = document.querySelectorAll(".authen-form")
 const authenheader = []
@@ -98,6 +100,7 @@ const viewIcon = document.querySelectorAll(".product-view")
 const addButton = document.querySelectorAll(".add-cart")
 var countIconCart = 0
 var countIconFavou = 0
+var quantityCart = 0
 function afterCheckLogin(element,nameExtention) {
  
   element.forEach(function(icon){
@@ -115,6 +118,7 @@ function afterCheckLogin(element,nameExtention) {
           console.log(acountCurrent.cart[countIconCart].querySelector(".dishes-product").attributes.style.value)
           para.innerHTML = '<div class="favourite-list-items__background" style="'+acountCurrent.cart[countIconCart].querySelector(".dishes-product").attributes.style.value+'"></div><div class="favourite-list-items__value"><div class="cart-name-wrap"><span class="headding"> '+acountCurrent.cart[countIconCart].querySelector(".headding").innerHTML+'</span></div><div class="buy-wrap"><span class="price">'+acountCurrent.cart[countIconCart].querySelector(".price").innerHTML+'</span><a href="#" class="buy btn btn-active">Buy Now</a></div></div>'
           countIconCart++
+          quantityCartElement.innerHTML = countIconCart
           close(document.querySelector(".cart-list-wrap"))
           }else {
             alert("san pham da duoc them")
@@ -141,8 +145,13 @@ viewIcon.forEach(function(value) {
     e.target.parentElement.querySelector(".product-view").classList.toggle("view-active")
   }
 })
+
+var quantityCartElement = document.querySelector(".cart-quantity")
 afterCheckLogin(favouriteIcon,'favourite')
- afterCheckLogin(addButton,'cart')
+afterCheckLogin(addButton,'cart')
+
+
+
 prevenPropagation(headerExtentions)
 
 

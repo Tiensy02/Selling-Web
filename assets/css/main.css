@@ -594,6 +594,20 @@
     z-index: 1;
     display: none;
 }
+.cart-quantity{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    right: -6px;
+    top:-6px;
+    color: rgb(231, 78, 58);
+    border: 1px solid var(--green-color);
+    text-align: center;
+    font-size: 14px;
+
+}
                                          /*No Cart*/
 .header__cart-list-no-cart{
     padding:35px 0;
