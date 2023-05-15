@@ -3,7 +3,7 @@ function close(selector) {
   selector.style.display = "none"
 }
 function openFlex(selector) {
-  selector.style.display = "flex" 
+  selector.style.display = "flex"
 }
 function openBlock(selector) {
   selector.style.display = "block"
@@ -75,7 +75,7 @@ activeElement(foodItems,"active",false)
               //AUTHENFORM
 const authenform = document.querySelectorAll(".authen-form")
 const authenheader = []
-authenform.forEach(function(value){
+authenform.forEach(function(value){ 
   authenheader.push(value.querySelector(".authen-form-header"))
 })
 authenheader.forEach(function(value) {
@@ -115,8 +115,9 @@ function afterCheckLogin(element,nameExtention) {
           const para = document.createElement("li");
           para.classList.add("favourite-list-items");
           document.querySelector(".cart-list").appendChild(para)
-          console.log(acountCurrent.cart[countIconCart].querySelector(".dishes-product").attributes.style.value)
-          para.innerHTML = '<div class="favourite-list-items__background" style="'+acountCurrent.cart[countIconCart].querySelector(".dishes-product").attributes.style.value+'"></div><div class="favourite-list-items__value"><div class="cart-name-wrap"><span class="headding"> '+acountCurrent.cart[countIconCart].querySelector(".headding").innerHTML+'</span></div><div class="buy-wrap"><span class="price">'+acountCurrent.cart[countIconCart].querySelector(".price").innerHTML+'</span><a href="#" class="buy btn btn-active">Buy Now</a></div></div>'
+          let cartCurrent = acountCurrent.cart[countIconCart]
+          console.log(cartCurrent.querySelector(".dishes-product").attributes.style.value)
+          para.innerHTML = '<div class="favourite-list-items__background" style="'+cartCurrent.querySelector(".dishes-product").attributes.style.value+'"></div><div class="favourite-list-items__value"><div class="cart-name-wrap"><span class="headding"> '+cartCurrent.querySelector(".headding").innerHTML+'</span></div><div class="buy-wrap"><span class="price">'+cartCurrent.querySelector(".price").innerHTML+'</span><a href="#" class="buy btn btn-active">Buy Now</a></div></div>'
           countIconCart++
           quantityCartElement.innerHTML = countIconCart
           close(document.querySelector(".cart-list-wrap"))

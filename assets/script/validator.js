@@ -216,7 +216,7 @@ Validator({
     rules: [
         Validator.isRequired('#fullname3',"Would you kindly provide your full name"),
         Validator.isRequired('#password3',"Would you kindly provide your password"),
-    ],
+    ], 
     onSubmit:function(data){
         if(checkLogin(data.allValue.fullname,data.allValue.password,Users)) {
             toggleElement(userInfomation,"hide")

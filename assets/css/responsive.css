@@ -5,7 +5,7 @@
         }
         .header__search.btn:first-child{ 
             display: flex; 
-        }
+        } 
         .add-cart{
             padding: 0 10px;
         }
