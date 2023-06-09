@@ -103,6 +103,16 @@ var countIconFavou = 0
 var quantityCart = 0
 var listcart = []
 var listNameCart =[]
+// Rise or reduce products
+const clickActiveNode = function (element) {
+  element.querySelectorAll(".btnQuantity").forEach(function(item) {
+   item.onclick = function(e) {
+    if(e.target.classList.contains("riseQuantity")) {
+      element.querySelector(".quantity").innerHTML = parseInt(element.querySelector(".quantity").innerHTML)+1
+    } else element.querySelector(".quantity").innerHTML = parseInt(element.querySelector(".quantity").innerHTML)-1
+   }
+  })
+}
 function afterCheckLogin(element, nameExtention) {
   element.forEach(function (icon) {
     icon.onclick = function (e) {
@@ -126,22 +136,20 @@ function afterCheckLogin(element, nameExtention) {
           </div> 
           </div><div class="buy-wrap"><span class="price">${productCurrent.querySelector(".price").innerHTML}</span><a href="#" class="buy btn btn-active">Buy Now</a></div>
           </div>`
+            var buttonQuantity = para.querySelector(".product-quantity")
+            clickActiveNode(buttonQuantity)
             const elementCarts = {
               cartElement: para,
-              number: 1
+              number: 1 
             }
             listcart.push(elementCarts)
             listNameCart.push(elementCarts.cartElement.querySelector(".headding").innerHTML)
-            console.log(listNameCart)
             countIconCart++
             quantityCart++
             quantityCartElement.innerHTML = quantityCart;
             close(document.querySelector(".cart-list-wrap"))
           } else {
-            console.log(listcart)
-            console.log(acountCurrent.cart)
             let indexOfProduct = listNameCart.indexOf(productCurrent.querySelector(".headding").innerHTML)
-            console.log(indexOfProduct)
             quantityCart++;
             listcart[indexOfProduct].number++;
             listcart[indexOfProduct].cartElement.querySelector(".quantity").innerHTML = listcart[indexOfProduct].number;
@@ -153,9 +161,7 @@ function afterCheckLogin(element, nameExtention) {
             const para = document.createElement("li");
             para.classList.add("favourite-list-items");
             document.querySelector(".favourite-list").appendChild(para)
-            console.log(acountCurrent.favourite[countIconFavou].querySelector(".dishes-product").attributes.style.value)
             para.innerHTML = `<div class="favourite-list-items__background" style="${acountCurrent.favourite[countIconFavou].querySelector(".dishes-product").attributes.style.value}"></div><div class="favourite-list-items__value"><div class="cart-name-wrap"><span class="headding">${acountCurrent.favourite[countIconFavou].querySelector(".headding").innerHTML}</span></div><span class="price">${acountCurrent.favourite[countIconFavou].querySelector(".price").innerHTML}</span> </div>`
-            console.log(acountCurrent.favourite[countIconFavou].querySelector(".price").innerHTML)
             countIconFavou++
             close(document.querySelector(".favourite-wrap"))
           } else alert("san pham da duoc them")
@@ -176,7 +182,6 @@ const foodOfMenus = document.querySelectorAll(".food-wrapper")
 const changeMenu = function() {
   var foodAcitve = document.querySelector(".food-items.active")
   foodOfMenus.forEach((element) => {
-    console.log(element.querySelector(".dishes-product").classList.contains(foodAcitve.innerHTML))
     if(!element.querySelector(".dishes-product").classList.contains(foodAcitve.innerHTML) && foodAcitve.innerHTML != "All" ) {
       close(element.parentElement)
     } else {

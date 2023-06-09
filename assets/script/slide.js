@@ -19,7 +19,7 @@ var swiper = new Swiper(".slider-wrapper", {
 var swiper = new Swiper(".feedback-wrap", {
       slidesPerView: "auto",
       spaceBetween: 30,
-      pagination: {
+      pagination: { 
         el: ".swiper-pagination",
         clickable: true,
       },

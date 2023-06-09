@@ -698,10 +698,10 @@
   
 }
 .product-quantity {
-    width: 110px;
     right:100px;
     bottom: 6px;
-    border: #ccc solid 1px;
+    width:123.5px;
+    border: #ccc 1px solid;
 }
 .btnQuantity {
     border: none;
@@ -709,6 +709,13 @@
     width: 30px;
     opacity: 0.5;
     cursor: pointer;
+  
+}
+.quantity{
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+
 }
 .reduceQuantity{
     border-right: #333 1px solid;
@@ -716,11 +723,7 @@
 .riseQuantity{
     border-left: #333 1px solid;
 }
-.quantity{
-   padding-left: 12.6px;
-   padding-right: 13px;
 
-}
 .favourite-list-items__value{
     display: flex;
     height: 4.3rem;
